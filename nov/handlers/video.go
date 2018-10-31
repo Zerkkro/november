@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"fmt"
-	"github.com/Zerkkro/november/src/nov/video"
+	"github.com/Zerkkro/november/nov/video"
 	"github.com/gin-gonic/gin"
 )
 
