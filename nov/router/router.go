@@ -3,7 +3,7 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	// "net/http"
-	"github.com/Zerkkro/november/src/nov/handlers"
+	"github.com/Zerkkro/november/nov/handlers"
 )
 
 // Init   Start server
@@ -24,5 +24,14 @@ func Init() {
 	{
 		apk.GET("/apk", handlers.HandleApkParse)
 	}
+
+	// exec := r.Group("/exec")
+	// {
+	// 	exec.Any("/", handlers.HandleExec)
+	// }
+	r.Any("/exec", handlers.HandleExec)
+	r.GET("/upload", handlers.HandleUpload)
+	r.POST("/upload", handlers.HandleUpload)
+
 	r.Run(":9100")
 }
